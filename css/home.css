@@ -1,0 +1,198 @@
+:root {
+    --color-primary: #2E7B9C;
+    --color-secondary: #ffffff;
+    --color-accent-light: #F5EBD7;
+}
+
+html {
+    font-size: 16px;
+}
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+}
+
+.hero-image {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/hero.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.hero-slogan {
+    position: absolute;
+    width: 100vw;
+    bottom: 20vh;
+    font-family: Lora;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+.btf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.btf .ourmission {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.btf .ourmission-header {
+    font-family: Lora, serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.btf .ourmission-text {
+    font-family: Inter, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #444444;
+    margin-top: 2rem;
+    max-width: 58rem;
+}
+
+.btf .successstories {
+    background-color: var(--color-accent-light);
+    width: 100vw;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.btf .successstories-header {
+    font-family: Lora, serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.btf .successstories-pictures {
+    display: grid;
+    grid-template-columns: 1fr 36rem 36rem 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". success1 success2 .";
+    justify-content: center;
+    grid-column-gap: 4rem;
+    margin: 4rem auto;
+    justify-items: center;
+}
+
+.btf .successstories-picture-1 {
+    grid-area: success1;
+    background-image: url(../images/success1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 36rem;
+    height: 36rem;
+}
+
+.btf .successstories-picture-2 {
+    grid-area: success2;
+    background-image: url(../images/success2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 36rem;
+    height: 36rem;
+}
+
+.btf .successstories-back-1 {
+    grid-area: success1;
+    background-color: #ffffff;
+    opacity: 0.0;
+    z-index: 1;
+    width: 36rem;
+    height: 36rem;
+}
+
+.btf .successstories-back-1:hover {
+    opacity: 0.9;
+}
+
+.btf .successstories-back-2 {
+    grid-area: success2;
+    background-color: #ffffff;
+    opacity: 0.0;
+    z-index: 1;
+    width: 36rem;
+    height: 36rem;
+}
+
+.btf .successstories-back-2:hover {
+    opacity: 0.9;
+}
+
+.btf .successstories-desc-1 {
+    grid-area: success1;
+    align-self: center;
+    justify-self: center;
+    text-align: left;
+    display: none;
+}
+
+.btf .successstories-back-1:hover + .successstories-desc-1 {
+    grid-area: success1;
+    width: 20rem;
+    text-align: left;
+    opacity: 0.0;
+    z-index: 2;
+    display: block;
+}
+
+.btf .successstories-back-1:hover + .successstories-desc-1 {
+    opacity: 1.0;
+}
+
+.btf .successstories-desc-2 {
+    grid-area: success2;
+    align-self: center;
+    justify-self: center;
+    text-align: left;
+    display: none;
+}
+
+.btf .successstories-back-2:hover + .successstories-desc-2 {
+    grid-area: success1;
+    width: 20rem;
+    text-align: left;
+    opacity: 0.0;
+    z-index: 2;
+    display: block;
+}
+
+.btf .successstories-back-2:hover + .successstories-desc-2 {
+    opacity: 1.0;
+}
+
+.btf .successstories-desc-header {
+    font-family: Lora, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.btf .successstories-desc-text {
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: black;
+}
+
+.statistics-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "stats-graph stats-header"
+                         "stats-graph stats-text";
+}
