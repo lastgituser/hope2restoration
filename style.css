@@ -23,6 +23,7 @@ header{
     width: 100vw;
     color:#015C86;
     background-color: white;
+    z-index: 20;
 }
 
 .logo{
