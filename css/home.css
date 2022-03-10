@@ -1,0 +1,348 @@
+:root {
+    --color-primary: #2E7B9C;
+    --color-secondary: #ffffff;
+    --color-accent-light: #F5EBD7;
+}
+
+html {
+    font-size: 16px;
+}
+
+.hero {
+    height: 100vh;
+    width: 100vw;
+}
+
+.hero-image {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../images/hero.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.hero-slogan {
+    position: absolute;
+    width: 100vw;
+    bottom: 10vh;
+    font-family: Lora;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+.btf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.btf .ourmission {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.btf .ourmission-header {
+    font-family: Lora, serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.btf .ourmission-text {
+    font-family: Inter, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #444444;
+    margin-top: 2rem;
+    max-width: 58rem;
+}
+
+.btf .successstories {
+    background-color: var(--color-accent-light);
+    width: 100vw;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.btf .successstories-header {
+    font-family: Lora, serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.btf .successstories-pictures {
+    display: grid;
+    grid-template-columns: 1fr 36rem 36rem 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". success1 success2 .";
+    justify-content: center;
+    grid-column-gap: 4rem;
+    margin: 4rem auto;
+    justify-items: center;
+}
+
+.btf .successstories-picture-1 {
+    grid-area: success1;
+    background-image: url(../images/success1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 36rem;
+    height: 36rem;
+}
+
+.btf .successstories-picture-2 {
+    grid-area: success2;
+    background-image: url(../images/success2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 36rem;
+    height: 36rem;
+}
+
+.btf .successstories-back-1 {
+    grid-area: success1;
+    background-color: #ffffff;
+    opacity: 0.0;
+    z-index: 1;
+    width: 36rem;
+    height: 36rem;
+}
+
+.btf .successstories-back-1:hover {
+    opacity: 0.9;
+}
+
+.btf .successstories-back-2 {
+    grid-area: success2;
+    background-color: #ffffff;
+    opacity: 0.0;
+    z-index: 1;
+    width: 36rem;
+    height: 36rem;
+}
+
+.btf .successstories-back-2:hover {
+    opacity: 0.9;
+}
+
+.btf .successstories-desc-1 {
+    grid-area: success1;
+    align-self: center;
+    justify-self: center;
+    text-align: left;
+    display: none;
+}
+
+.btf .successstories-back-1:hover + .successstories-desc-1 {
+    grid-area: success1;
+    width: 20rem;
+    text-align: left;
+    opacity: 0.0;
+    z-index: 2;
+    display: block;
+}
+
+.btf .successstories-back-1:hover + .successstories-desc-1 {
+    opacity: 1.0;
+}
+
+.btf .successstories-desc-2 {
+    grid-area: success2;
+    align-self: center;
+    justify-self: center;
+    text-align: left;
+    display: none;
+}
+
+.btf .successstories-back-2:hover + .successstories-desc-2 {
+    grid-area: success1;
+    width: 20rem;
+    text-align: left;
+    opacity: 0.0;
+    z-index: 2;
+    display: block;
+}
+
+.btf .successstories-back-2:hover + .successstories-desc-2 {
+    opacity: 1.0;
+}
+
+.btf .successstories-desc-header {
+    font-family: Lora, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.btf .successstories-desc-text {
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: black;
+}
+
+.btf .statistics {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100vw;
+}
+
+.btf .statistics-list {
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    grid-row-gap: 2rem;
+}
+
+
+.btf .statistics-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "stats-graph stats-header"
+                         "stats-graph stats-text";
+}
+
+.btf .statistics-graph {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    transform: rotate(90deg);
+    justify-self: center;
+    grid-area: stats-graph;
+}
+
+.btf #graph1 {
+    content: "";
+    background: conic-gradient(var(--color-primary) 41%, var(--color-secondary) 0%);
+}
+
+.btf #graph2 {
+    content: "";
+    background: conic-gradient(var(--color-primary) 55%, var(--color-secondary) 0%);
+    margin-bottom: 2rem;
+}
+
+.btf #graph3 {
+    content: "";
+    background: conic-gradient(var(--color-primary) 71%, var(--color-secondary) 0%);
+}
+
+.btf .statistics-number {
+    font-family: Inter, sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.btf .statistics-text {
+    font-family: Inter, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: black;
+    max-width: 18rem;
+    align-self: flex-start;
+}
+
+.btf .statistics-pics {
+    background-color: var(--color-primary);
+    justify-self: flex-end;
+    min-width: 30rem;
+}
+
+.btf .statistics-pic {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btf #pic1 {
+    position: relative;
+    left: 8rem;
+    top: 2rem;
+    height: 20rem;
+    width: 20rem;
+    background-image: url(../images/stats-pic1.png);
+}
+
+.btf #pic2 {
+    position: relative;
+    right: 2rem;
+    height: 14rem;
+    width: 21rem;
+    background-image: url(../images/stats-pic2.png);
+    z-index: 1;
+    bottom: 4rem;
+}
+
+.btf #pic3 {
+    position: relative;
+    width: 20rem;
+    height: 14rem;
+    background-image: url(../images/stats-pic3.png);
+    bottom: 8rem;
+    left: 6rem;
+    z-index: 2;
+}
+
+.btf .sponsors {
+    padding: 4rem 0;
+    background-color: var(--color-accent-light);
+    width: 100vw;
+}
+
+.btf .sponsors-header {
+    font-family: Lora, serif;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.btf .sponsors-list {
+    margin: 4rem 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btf .sponsor-img {
+    height: 6rem;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.btf #sponsor1 {
+    background-image: url(../images/sponsor1.png);
+}
+
+.btf #sponsor2 {
+    background-image: url(../images/sponsor2.png);
+}
+
+.btf #sponsor3 {
+    background-image: url(../images/sponsor3.png);
+}
+
+.btf #sponsor4 {
+    background-image: url(../images/sponsor4.png);
+}
+
+.btf #sponsor5 {
+    background-image: url(../images/sponsor5.png);
+}
+
+.btf #sponsor6 {
+    background-image: url(../images/sponsor6.png);
+}
